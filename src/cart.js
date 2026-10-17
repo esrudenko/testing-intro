@@ -61,9 +61,13 @@ function changeQuantity(cart, productID, quantity) {
   }
 }
 
-function removeFromCart() {
-  return notImplemented();
+function removeFromCart(cart, productID) {
+  const updateCart = cart.filter((c) => {
+    return c.id !== productID;
+  });
+  return updateCart;
 }
+
 function calculateCartSubtotal() {
   return notImplemented();
 }
